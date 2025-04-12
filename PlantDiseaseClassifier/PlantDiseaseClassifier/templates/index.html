@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1>Plant Disease Classifier</h1>
+    <p class="lead">Is your plant ok? Find out if your plant is healthy!</p>
+    <p><a href="http://flask.pocoo.org/" class="btn btn-primary btn-large">Add your picture &#43;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Getting started</h2>
+        <p>
+            PDC gives you a powerful, AI powered plant disease classifier. Providing
+            an accuarate and precise classification of plant health for 15+ plants!
+         
+        </p>
+        <p><a class="btn btn-default" href="http://flask.pocoo.org/docs/">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Plants</h2>
+        <p>Don't believe it?<br>Pick a healthy or diseased plant and test the accuracy of our app!</p>
+        <p><a class="btn btn-default" href="{{url_for(test_images)}}">Pick one &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Diseases & Treatments</h2>
+        <p>You can easily publish to Microsoft Azure using Visual Studio. Find out how you can host your application using a free trial today.</p>
+        <p><a class="btn btn-default" href="http://azure.microsoft.com">Learn more &raquo;</a></p>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>28dbb1e1-2cf8-460d-8f99-75f2101051e7</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectTypeGuids>{789894c7-04a9-4a11-a6b5-3f4435165112};{1b580a1a-fdb3-4b32-83e1-6407eb2722e6};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>runserver.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <LaunchProvider>Web launcher</LaunchProvider>
+    <WebBrowserUrl>http://localhost</WebBrowserUrl>
+    <OutputPath>.</OutputPath>
+    <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
+    <Name>PlantDiseaseClassifier</Name>
+    <RootNamespace>PlantDiseaseClassifier</RootNamespace>
+    <InterpreterId>CondaEnv|CondaEnv|PDC</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="runserver.py" />
+    <Compile Include="PlantDiseaseClassifier\__init__.py" />
+    <Compile Include="PlantDiseaseClassifier\views.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="PlantDiseaseClassifier\" />
+    <Folder Include="PlantDiseaseClassifier\static\" />
+    <Folder Include="PlantDiseaseClassifier\static\content\" />
+    <Folder Include="PlantDiseaseClassifier\static\fonts\" />
+    <Folder Include="PlantDiseaseClassifier\static\test_images\" />
+    <Folder Include="PlantDiseaseClassifier\static\scripts\" />
+    <Folder Include="PlantDiseaseClassifier\templates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PlantDiseaseClassifier\static\test_images\AppleCedarRust1.JPG" />
+    <Content Include="PlantDiseaseClassifier\static\test_images\AppleCedarRust2.JPG" />
+    <Content Include="PlantDiseaseClassifier\static\test_images\AppleCedarRust3.JPG" />
+    <Content Include="PlantDiseaseClassifier\static\test_images\AppleCedarRust4.JPG" />
+    <Content Include="PlantDiseaseClassifier\static\test_images\AppleScab1.JPG" />
+    <Content Include="PlantDiseaseClassifier\static\test_images\AppleScab2.JPG" />
+    <Content Include="PlantDiseaseClassifier\static\test_images\AppleScab3.JPG" />
+    <Content Include="PlantDiseaseClassifier\static\test_images\CornCommonRust1.JPG" />
+    <Content Include="PlantDiseaseClassifier\static\test_images\CornCommonRust2.JPG" />
+    <Content Include="PlantDiseaseClassifier\static\test_images\CornCommonRust3.JPG" />
+    <Content Include="PlantDiseaseClassifier\static\test_images\PotatoEarlyBlight1.JPG" />
+    <Content Include="PlantDiseaseClassifier\static\test_images\PotatoEarlyBlight2.JPG" />
+    <Content Include="PlantDiseaseClassifier\static\test_images\PotatoEarlyBlight3.JPG" />
+    <Content Include="PlantDiseaseClassifier\static\test_images\PotatoEarlyBlight4.JPG" />
+    <Content Include="PlantDiseaseClassifier\static\test_images\PotatoEarlyBlight5.JPG" />
+    <Content Include="PlantDiseaseClassifier\static\test_images\PotatoHealthy1.JPG" />
+    <Content Include="PlantDiseaseClassifier\static\test_images\PotatoHealthy2.JPG" />
+    <Content Include="PlantDiseaseClassifier\static\test_images\TomatoEarlyBlight1.JPG" />
+    <Content Include="PlantDiseaseClassifier\static\test_images\TomatoEarlyBlight2.JPG" />
+    <Content Include="PlantDiseaseClassifier\static\test_images\TomatoEarlyBlight3.JPG" />
+    <Content Include="PlantDiseaseClassifier\static\test_images\TomatoEarlyBlight4.JPG" />
+    <Content Include="PlantDiseaseClassifier\static\test_images\TomatoEarlyBlight5.JPG" />
+    <Content Include="PlantDiseaseClassifier\static\test_images\TomatoEarlyBlight6.JPG" />
+    <Content Include="PlantDiseaseClassifier\static\test_images\TomatoHealthy1.JPG" />
+    <Content Include="PlantDiseaseClassifier\static\test_images\TomatoHealthy2.JPG" />
+    <Content Include="PlantDiseaseClassifier\static\test_images\TomatoHealthy3.JPG" />
+    <Content Include="PlantDiseaseClassifier\static\test_images\TomatoHealthy4.JPG" />
+    <Content Include="PlantDiseaseClassifier\static\test_images\TomatoYellowCurlVirus1.JPG" />
+    <Content Include="PlantDiseaseClassifier\static\test_images\TomatoYellowCurlVirus2.JPG" />
+    <Content Include="PlantDiseaseClassifier\static\test_images\TomatoYellowCurlVirus3.JPG" />
+    <Content Include="PlantDiseaseClassifier\static\test_images\TomatoYellowCurlVirus4.JPG" />
+    <Content Include="PlantDiseaseClassifier\static\test_images\TomatoYellowCurlVirus5.JPG" />
+    <Content Include="PlantDiseaseClassifier\static\test_images\TomatoYellowCurlVirus6.JPG" />
+    <Content Include="PlantDiseaseClassifier\templates\about.html" />
+    <Content Include="PlantDiseaseClassifier\templates\classified.html" />
+    <Content Include="requirements.txt" />
+    <Content Include="PlantDiseaseClassifier\static\content\bootstrap.css" />
+    <Content Include="PlantDiseaseClassifier\static\content\bootstrap.min.css" />
+    <Content Include="PlantDiseaseClassifier\static\content\site.css" />
+    <Content Include="PlantDiseaseClassifier\static\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="PlantDiseaseClassifier\static\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="PlantDiseaseClassifier\static\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="PlantDiseaseClassifier\static\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="PlantDiseaseClassifier\static\scripts\bootstrap.js" />
+    <Content Include="PlantDiseaseClassifier\static\scripts\bootstrap.min.js" />
+    <Content Include="PlantDiseaseClassifier\static\scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="PlantDiseaseClassifier\static\scripts\jquery-1.10.2.js" />
+    <Content Include="PlantDiseaseClassifier\static\scripts\jquery-1.10.2.min.js" />
+    <Content Include="PlantDiseaseClassifier\static\scripts\jquery-1.10.2.min.map" />
+    <Content Include="PlantDiseaseClassifier\static\scripts\jquery.validate-vsdoc.js" />
+    <Content Include="PlantDiseaseClassifier\static\scripts\jquery.validate.js" />
+    <Content Include="PlantDiseaseClassifier\static\scripts\jquery.validate.min.js" />
+    <Content Include="PlantDiseaseClassifier\static\scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="PlantDiseaseClassifier\static\scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="PlantDiseaseClassifier\static\scripts\modernizr-2.6.2.js" />
+    <Content Include="PlantDiseaseClassifier\static\scripts\respond.js" />
+    <Content Include="PlantDiseaseClassifier\static\scripts\respond.min.js" />
+    <Content Include="PlantDiseaseClassifier\static\scripts\_references.js" />
+    <Content Include="PlantDiseaseClassifier\templates\test_images.html" />
+    <Content Include="PlantDiseaseClassifier\templates\contact.html" />
+    <Content Include="PlantDiseaseClassifier\templates\index.html" />
+    <Content Include="PlantDiseaseClassifier\templates\layout.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="CondaEnv|CondaEnv|PDC" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
