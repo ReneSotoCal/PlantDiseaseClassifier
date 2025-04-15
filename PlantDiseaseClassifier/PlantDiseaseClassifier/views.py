@@ -5,6 +5,11 @@ import os
 from datetime import datetime
 from flask import render_template, url_for, request
 from PlantDiseaseClassifier import app
+import numpy as np
+import tensorflow as tf
+from tensorflow.keras.models import load_model
+from tensorflow.keras.utils import load_img
+from tensorflow.keras.preprocessing.image import ImageDataGenerator, img_to_array
 
 @app.route('/')
 @app.route('/home')
@@ -54,11 +59,42 @@ def test_images():
 
 @app.route('/classify', methods=['POST'])
 def classify():
-    test_image = request.form['selected_image']
+    img_size = (224,224)
+    test_image_path = request.form['selected_image']
+    image_path = os.path.join(app.root_path, test_image_path)
+    parent_dir = os.path.dirname(app.root_path)
+    model_path = os.path.join(app.root_path,'static' , 'model', 'plant_model_test_conv_output_3.keras')
+    image_folder = os.path.join(app.root_path, 'static', 'test_images')
+    class_labels = get_class_labels(image_folder)
+  
+    img = load_img(image_path, target_size=img_size)
+    img_array = img_to_array(img)
+    normalized_img = img_array/255.0
+    if os.access(model_path, os.R_OK):
+        print(" Model file exists and is readable.")
+    else:
+        print(" Model file exists but is NOT readable.")
+    model = load_model(model_path)
+    predictions = model.predict(np.expand_dims(normalized_img, axis=0))
+    predicted_index = np.argmax(predictions[0])
+    predicted_label = class_labels[predicted_index]
+
+   # prediction = model.predict(normalized_img.flow_from_directory())
     return render_template(
         'classified.html',
         title='Classfied',
+        prediction=predicted_label,
         year=datetime.now().year,
-        message='Your plant is: ',
-        test_image=test_image
+        message=f'Your plant is: {predicted_label}',
+        test_image=test_image_path
     )
+
+def get_class_labels(path):
+    gen = ImageDataGenerator().flow_from_directory(
+    path,
+    target_size=(224, 224),       
+    batch_size=1,
+    class_mode='categorical',
+    shuffle=False
+    )
+    return list(gen.class_indices.keys())

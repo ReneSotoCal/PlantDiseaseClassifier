@@ -37,11 +37,13 @@
     <Folder Include="PlantDiseaseClassifier\static\" />
     <Folder Include="PlantDiseaseClassifier\static\content\" />
     <Folder Include="PlantDiseaseClassifier\static\fonts\" />
+    <Folder Include="PlantDiseaseClassifier\static\model\" />
     <Folder Include="PlantDiseaseClassifier\static\test_images\" />
     <Folder Include="PlantDiseaseClassifier\static\scripts\" />
     <Folder Include="PlantDiseaseClassifier\templates\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="PlantDiseaseClassifier\static\model\plant_model_test_conv_output_3.keras" />
     <Content Include="PlantDiseaseClassifier\static\test_images\AppleCedarRust1.JPG" />
     <Content Include="PlantDiseaseClassifier\static\test_images\AppleCedarRust2.JPG" />
     <Content Include="PlantDiseaseClassifier\static\test_images\AppleCedarRust3.JPG" />
