@@ -65,7 +65,7 @@ def classify():
     parent_dir = os.path.dirname(app.root_path)
     model_path = os.path.join(app.root_path,'static' , 'model', 'plant_model_test_conv_output_3.keras')
     image_folder = os.path.join(app.root_path, 'static', 'test_images')
-    class_labels = get_class_labels(image_folder)
+    class_labels = [num for num in range(0, 37)]
   
     img = load_img(image_path, target_size=img_size)
     img_array = img_to_array(img)
