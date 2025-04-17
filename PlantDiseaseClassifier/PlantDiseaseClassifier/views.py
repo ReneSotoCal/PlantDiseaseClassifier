@@ -52,9 +52,9 @@ def test_images():
     return render_template(
         'test_images.html',
         images=images,
-        title='Test Pictures',
+        title='Test Images',
         year=datetime.now().year,
-        message='Your application test images page.'
+        message='Pick an Image to Classify:'
     )
 
 @app.route('/classify', methods=['POST'])
@@ -70,10 +70,7 @@ def classify():
     img = load_img(image_path, target_size=img_size)
     img_array = img_to_array(img)
     normalized_img = img_array/255.0
-    if os.access(model_path, os.R_OK):
-        print(" Model file exists and is readable.")
-    else:
-        print(" Model file exists but is NOT readable.")
+
     model = load_model(model_path)
     predictions = model.predict(np.expand_dims(normalized_img, axis=0))
     predicted_index = np.argmax(predictions[0])
@@ -89,12 +86,12 @@ def classify():
         test_image=test_image_path
     )
 
-def get_class_labels(path):
-    gen = ImageDataGenerator().flow_from_directory(
-    path,
-    target_size=(224, 224),       
-    batch_size=1,
-    class_mode='categorical',
-    shuffle=False
-    )
+def get_predicted_label(index):
+    match index:
+        case i if 0 <= i <= 3: 
+            label = 'Apple Cedar Rust'
     return list(gen.class_indices.keys())
+
+def get_class_label():
+    labels = [ ]
+    return labels

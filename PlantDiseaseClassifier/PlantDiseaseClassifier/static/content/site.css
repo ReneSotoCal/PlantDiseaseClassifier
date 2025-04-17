@@ -1,12 +1,39 @@
+:root {
+    --primary-green: #69885C;
+    --primary-green-hover: #5A754F;
+    --neutral-base: #F5F3ED;
+    --secondary-earthy: #A67B65;
+    --secondary-hover: #8C6448;
+    --accent: #D9CAB3;
+    --dark-contrast: #3E3E3E;
+}
 body {
+    position: relative;
+    display: grid;
+    grid-template-rows: 2em auto;
+    min-height: 100vh;
+    height: 100%;
+    color: var(--dark-contrast);
     padding-top: 50px;
-    padding-bottom: 20px;
+    margin-bottom: .5em;
+    background-color: var(--neutral-base);
+}
+
+.cursor {
+    cursor:pointer;
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+    margin-bottom: 2em;
+    width: 100%;
+    padding: 0;
+    height: 100%;
+    grid-row: 2;
+}
+
+#index-body {
+    height: 100%;
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
@@ -39,4 +66,147 @@ input[type="checkbox"].input-validation-error {
 
 .validation-summary-valid {
     display: none;
+}
+
+.navbar {
+    background-color: var(--primary-green);
+    grid-row: 1;
+}
+
+.comp-logo {
+    height: 6em;
+}
+
+.navbar-nav {
+    position: absolute;
+    left: 12.5%;
+    bottom: 1.25em;
+    display: flex;
+    width: 75%;
+    justify-content: space-between;
+}
+
+
+.nav li a {
+    font-size: 1.25em;
+    color: var(--neutral-base);
+}
+
+    .nav li a:hover {
+        color: var(--dark-contrast);
+    }
+
+.nav-item {
+    display: flex;
+    align-items: center;
+}
+
+.jumbotron {
+    background-color: var(--accent);
+}
+
+/*
+*****   Buttons    *****
+*/
+
+button.earth-theme-btn {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    border: 1px solid var(--secondary-earthy);
+    padding: .875rem 1.75rem;
+    font-size: 1.1rem;
+    border-radius: .5rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    color: var(--neutral-base);
+    background-color: var(--secondary-earthy);
+}
+    button.earth-theme-btn:hover {
+        color: var(--neutral-base);
+        border-color: var(--secondary-hover);
+        background-color: var(--secondary-hover);
+    }
+
+#btn-classify {
+    font-size: 1em;
+    width: 100%;
+    margin-top: 1em;
+}
+/*
+*****   Buttons End     *****
+*/
+/*
+*****   Test Image Page *****
+*/
+form {
+    margin-bottom: 1em;
+}
+
+#test-img-body-grid {
+    background-color: var(--accent);
+    border-radius: .5rem;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#test-img-grid {
+    margin: 0 1em;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+    gap: 1em;
+    padding: 1em;
+    grid-column: 2;
+}
+.card-radio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--neutral-base);
+}
+
+    .card-radio:hover {
+        background-color: var(--secondary-hover);
+    }
+
+    .card-radio input[type="radio"] {
+        display: none;
+    }
+
+    .card-radio img {
+        width: 100%;
+        max-width: 150px;
+        border-radius: 1em;
+        margin: 1em;
+    }
+
+    .card-radio:has(input[type="radio"]:checked) {
+        background-color: var(--secondary-hover);
+        box-shadow: 0 0 1em rgba(90, 117, 79, 0.5);
+        transform: scale(1.05);
+    }
+
+/*
+*****   Test Image Page End     *****
+*/
+
+footer {
+    left: 1em;
+    position: absolute;
+    bottom: 0;
+    align-content: center;
 }

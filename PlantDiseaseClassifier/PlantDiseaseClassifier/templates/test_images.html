@@ -1,20 +1,31 @@
 {% extends "layout.html" %}
 
 {% block content %}
-
-<h2>{{ title }}.</h2>
-<h3>{{ message }}</h3>
 <form action="/classify" method="post">
-    {% for img_path in images %}
-    <div style="margin:10px 0;">
-        <label>
-            <input type="radio" name="selected_image" value="{{ img_path }}">
-            <img src="{{ img_path }}" width="150" style="margin-left:10px;">
-        </label>
-    </div>
-    {% endfor %}
-    <button type="submit">Classify</button>
+        <!--Left Section-->
+        <div id="test-img-left-section-grid"></div>
+        <!--Center Grid -->
+        <div id="test-img-body-grid">
+            <div class="header-container">
+                <h2>{{ title }}</h2>
+                <h3>{{ message }}</h3>
+            </div>
+            <div id="test-img-grid">
+
+                {% for img_path in images %}
+                <div class="test-img-container">
+                    <label class="card-radio">
+                        <input class="cstm-radio-btn" type="radio" name="selected_image" value="{{ img_path }}" required>
+                        <img class="test-img" src="{{ img_path }}">
+                    </label>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+            <button type="submit" id="btn-classify" class="earth-theme-btn">Classify</button>
+            <!--Right Section-->
+            <div id="test-img-right-section-grid"></div>
+        
 </form>
-<p>Use this area to provide additional information.</p>
 
 {% endblock %}

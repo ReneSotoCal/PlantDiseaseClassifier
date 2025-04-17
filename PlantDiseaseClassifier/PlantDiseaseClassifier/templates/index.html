@@ -1,32 +1,33 @@
 {% extends "layout.html" %}
 
 {% block content %}
+<div id="index-body">
 
-<div class="jumbotron">
-    <h1>Plant Disease Classifier</h1>
-    <p class="lead">Is your plant ok? Find out if your plant is healthy!</p>
-    <p><a href="http://flask.pocoo.org/" class="btn btn-primary btn-large">Add your picture &#43;</a></p>
-</div>
+    <div class="jumbotron">
+        <h1>Plant Disease Classifier</h1>
+        <p class="lead">Is your plant healthy? Find out here!</p>
+        <button onclick="window.location.href='http://flask.pocoo.org/'" class="btn-large earth-theme-btn">Add your picture &#43;</button>
+    </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            PDC gives you a powerful, AI powered plant disease classifier. Providing
-            an accuarate and precise classification of plant health for 15+ plants!
-         
-        </p>
-        <p><a class="btn btn-default" href="http://flask.pocoo.org/docs/">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Plants</h2>
-        <p>Don't believe it?<br>Pick a healthy or diseased plant and test the accuracy of our app!</p>
-        <p><a class="btn btn-default" href="{{url_for(test_images)}}">Pick one &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Diseases & Treatments</h2>
-        <p>You can easily publish to Microsoft Azure using Visual Studio. Find out how you can host your application using a free trial today.</p>
-        <p><a class="btn btn-default" href="http://azure.microsoft.com">Learn more &raquo;</a></p>
+    <div class="row">
+        <div class="col-md-4">
+            <h2>Getting started</h2>
+            <p>
+                CropShield gives you a powerful, AI powered plant disease classifier. Providing
+                an accuarate and precise classification of plant health for 15+ plants!
+            </p>
+            <button class="earth-theme-btn" onclick="window.location.href='https://pmc.ncbi.nlm.nih.gov/articles/PMC7706313/'">Learn more &raquo;</button>
+        </div>
+        <div class="col-md-4">
+            <h2>Test Our Model</h2>
+            <p>Pick a healthy or diseased plant from our list of testable images. Our model will process the image and output what your plant is and whether or not it's healthy!</p>
+            <button class="earth-theme-btn" onclick="window.location.href='{{url_for(test_images)}}'">Pick one &raquo;</button>
+        </div>
+        <div class="col-md-4">
+            <h2>Diseases & Treatments</h2>
+            <p>Find information on plant diseases and the steps required for treatment!</p>
+            <button class="earth-theme-btn" onclick="window.location.href='http://azure.microsoft.com'">Continue &raquo;</button>
+        </div>
     </div>
 </div>
 
