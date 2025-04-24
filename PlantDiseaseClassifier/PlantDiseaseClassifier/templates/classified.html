@@ -1,14 +1,20 @@
 {% extends "layout.html" %}
 
 {% block content %}
+<div id="classifier-body">
 
-<h2>{{ title }}.</h2>
-<h3>{{ message }}</h3>
+    <h1>{{ title }}</h1>
+    <div class="card-container">
 
-    <div style="margin:10px 0;">
-            <img src="{{ test_image }}" width="150" style="margin-left:10px;">
+        <h3>{{message_2}}</h3>
+        <div class="card-img-container">
+            <img src="{{ test_image }}">
+        </div>
+        <h4>{{ message }}</h4>
+
     </div>
 
-<p>{{message_2}}</p>
+    <button id="retry-test-btn" class="earth-theme-btn" onclick="window.location.href='{{url_for(test_images)}}'">Test Another <i class="fal fa-redo"></i></button>
+</div>
 
-{% endblock %}
+    {% endblock %}

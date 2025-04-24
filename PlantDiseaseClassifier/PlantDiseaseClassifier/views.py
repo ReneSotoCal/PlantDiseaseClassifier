@@ -28,9 +28,9 @@ def contact():
     """Renders the contact page."""
     return render_template(
         'contact.html',
-        title='Contact',
+        title='Contact Us',
         year=datetime.now().year,
-        message='Your contact page.'
+        message='Email or Call for Inquiries'
     )
 
 @app.route('/about')
@@ -38,9 +38,9 @@ def about():
     """Renders the about page."""
     return render_template(
         'about.html',
-        title='About',
+        title='About Our Model',
         year=datetime.now().year,
-        message='Your application description page.'
+        message='How Our Model Works.'
     )
 
 @app.route('/test_images')
@@ -94,16 +94,17 @@ def classify():
     if predicted_disease == "healthy":
         grammar = "is"
     
-    message_2 = f"The test image above is of a {truth[1]} leaf that {grammar} {' '.join(truth[2:])} "
+    message_2 = f"You chose the {truth[1]} leaf that {grammar} {' '.join(truth[2:])}!"
     
    # prediction = model.predict(normalized_img.flow_from_directory())
     return render_template(
         'classified.html',
-        title='Classfied',
+        title='CropShieldAI',
         prediction=predicted_label,
         year=datetime.now().year,
-        message=f'Our model is {prob:.2%} certain that this {predicted_plant} leaf {grammar} {predicted_disease}',
-        message_2 = message_2,
+        message=f'CropShieldAI predicts with {prob:.2%} certainty that this {predicted_plant} leaf {grammar} {predicted_disease}',
+        message_2=message_2,
+        test_images='test_images',
         test_image=test_image_path
     )
 

@@ -122,7 +122,7 @@ button.earth-theme-btn {
     user-select: none;
     border: 1px solid var(--secondary-earthy);
     padding: .875rem 1.75rem;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     border-radius: .5rem;
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
     color: var(--neutral-base);
@@ -164,7 +164,7 @@ form {
 #test-img-grid {
     margin: 0 1em;
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+    grid-template-columns: repeat(5, 1fr); /* 4 cards per row */
     gap: 1em;
     padding: 1em;
     grid-column: 2;
@@ -175,6 +175,7 @@ form {
     align-items: center;
     border-radius: 1em;
     cursor: pointer;
+    padding: 1em;
     transition: all 0.3s ease-in-out;
     background-color: var(--neutral-base);
 }
@@ -189,9 +190,8 @@ form {
 
     .card-radio img {
         width: 100%;
-        max-width: 150px;
+        max-width: 90%;
         border-radius: 1em;
-        margin: 1em;
     }
 
     .card-radio:has(input[type="radio"]:checked) {
@@ -204,6 +204,41 @@ form {
 *****   Test Image Page End     *****
 */
 
+
+/*
+*****   Classified Page     *****   
+*/
+#classifier-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 95%;
+    border-radius: 1em;
+    align-items: center;
+    background-color: var(--accent);
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 60%;
+    align-items: center;
+    background-color: var(--neutral-base);
+    width: 80%;
+    border-radius: 1em;
+}
+
+.img-container{
+    padding: 1em;
+}
+
+#retry-test-btn {
+    width: 90%;
+}
+/*
+*****   Classified Page End     *****   
+*/
 footer {
     left: 1em;
     position: absolute;
